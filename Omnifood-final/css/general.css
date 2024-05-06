@@ -1,0 +1,249 @@
+/* 
+
+--- Font sizes Units (px) ---
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 
+/ 44 / 52 / 62 / 74 / 86 / 98
+
+--- Spacing system Units (px) --- 
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 
+/ 80 / 96 / 128
+
+--- 01 TYPOGRAPHY ---
+
+Default: 1.6rem, 1.4rem, 1.8rem, 2rem, 
+-font weight: 400 [D], 500, 600, 700
+-line heights: 1 [D], 1.03, 1.6, 1.8, 
+-letter-spacing: 0.75px, -0.5px
+
+
+--- 02 COLORS ---
+
+-Primary color: #e67e22
+Tints: #fdf2e9, 
+Shades: #cf711f , #a15818, #45260a
+
+Grey: #555
+Tints: #999, #777,
+#6f6f6f [Lightest color can be used on #fdf2e9]
+#767676 [Lightest color can be used on #fff]
+Shades: #333, 
+Accent: #ffe066, #8ce99a, #2f9e44
+
+
+--- 03 IMAGES / ILLUSTRATIONS ---
+
+-Images: unsplash.com
+-Customer images: uifaces.com
+
+
+--- 04 ICONS ---
+
+-Website: ionicons.io
+
+
+--- 05 SHADOWS ---
+
+-Size: 3px, 11px, 1.6rem, 3.2rem,
+ 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15)
+
+
+--- 06 BORDER RADIUS ---
+
+-Size: 0.8rem, 50%,
+
+
+--- 07  WHITESPACES ---
+ 
+-Size: 9.6rem , 4.8rem , 3.2rem, 1.6rem, 1.2rem, 
+2.4rem,  
+
+
+/*      --- Necessary Styles---     */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: #555;
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+
+/*      ---Reusable Styles---     */
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid-center-v {
+  align-items: center;
+}
+
+.grid-center-h {
+  justify-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  /* For Mobile Navigation to work */
+  position: relative;
+}
+
+.main-logo {
+  height: 2.4rem;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  color: #333;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  margin-bottom: 9.6rem;
+  line-height: 1.2;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  margin-bottom: 3.2rem;
+  line-height: 1.2;
+}
+
+.sub-heading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  color: #cf711f;
+  margin-bottom: 1.6rem;
+}
+
+.form-btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  text-decoration: none;
+  padding: 1.6rem 3.2rem;
+  border-radius: 0.8rem;
+  transition: all 0.3s;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  display: flex;
+  font-size: 1.8rem;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
+strong {
+  font-weight: 500;
+  color: #333;
+}
+
+.form-btn {
+  align-self: end;
+  padding: 1.2rem;
+  color: #fdf2e9;
+  background-color: #45260a;
+}
+
+.form-btn:hover {
+  color: #e67e22;
+  background-color: #fdf2e9;
+}
+
+/* For better Accessibility */
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
+/* HELPER CLASSES */
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center !important;
+}
